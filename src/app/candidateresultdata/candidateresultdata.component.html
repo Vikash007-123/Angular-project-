@@ -1,0 +1,76 @@
+<app-homepage></app-homepage>
+
+<h1 style="color: white; text-align: center;">Interview Taken</h1>
+
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <img mat-card-image src="assets/logo2.png" alt="Photo of a Shiba Inu" />
+    </div>
+    <mat-card-title>Interview Result</mat-card-title>
+    <mat-card-subtitle>MHire</mat-card-subtitle>
+  </mat-card-header>
+  <div class="example-container">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Interview Result</mat-label>
+        <input matInput placeholder="UserName" value="345678" />
+      </mat-form-field>
+    </form>
+    <div class="example-button-row">
+      <button
+        mat-button
+        color="#fff"
+        class="btn btn-primary"
+        (click)="openDialog()"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</mat-card> -->
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)"  placeholder="Filter">
+  </mat-form-field>
+</div>
+<div>
+  <div class="example-container mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" matSort >
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="interviewAutoId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.interviewAutoId}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="companyName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Client Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.jobOpenings.client.companyName}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="dateTime">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="interviewStatus">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ 
+</table>
+<mat-paginator [pageSizeOptions]="[3, 6, 10]" >
+</mat-paginator> 
+</div>
+
+
+
+
+

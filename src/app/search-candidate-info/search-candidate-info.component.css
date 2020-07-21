@@ -1,0 +1,26 @@
+.card{
+  position: absolute;
+  height: 65%;
+  top: 25%;
+  right: 11%;
+  
+
+
+
+}
+
+img{
+  width: 320px;height: 170px;
+
+}
+.card-body{
+  background-color: #219bd7;
+  color: #ffffff;
+}
+
+.img-fluid{
+  width: 50%;
+  height: 90%;
+  margin-top: 1
+  0%;
+}

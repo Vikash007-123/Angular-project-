@@ -1,0 +1,59 @@
+<h1 style="color: white; text-align: center;">MHire Admin Dashboard</h1>
+
+<body>
+    <div class="topnav">
+        <a routerLink="/scheduledadmin"> Interview_Schedule_for_candidate </a>
+    
+        <a routerLink="['/']">Interview_Result</a>
+        <a routerLink="/home">Home</a>
+        
+            
+    </div>
+<br><br>
+
+
+    <div class="main">
+
+    
+        Create:
+        <select (change)="selectOption($event.target.value)">
+            <option [value]="createdUser" *ngFor="let createdUser of CreateUsers">{{createdUser}}</option>
+        </select>
+    
+
+
+    View profile:
+    <select (change)="profileOf($event.target.value)">
+        <option>
+            Candidate
+        </option>
+        <option>
+            Client
+        </option>
+    </select>
+
+
+    View User:
+
+
+    <select (change)="ViewOf($event.target.value)">
+
+        <option [value]="createdUser" *ngFor="let createdUser of CreateUsers">{{createdUser}}</option>
+
+
+    </select>
+
+
+    <th>
+        <tr *ngFor="let disp of Displayarray">{{disp}} </tr>
+
+    </th>
+
+
+
+
+
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>

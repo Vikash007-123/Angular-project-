@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreateCandidateDetails</title>
+  </head>
+  <body style="background-color: lightgray;">
+    <app-homepage></app-homepage>
+
+    <!-- <h1><strong>Fill Candidate Information</strong></h1>
+    <form>
+      <label id="name" for="Name"><strong>Name</strong></label
+      ><br />
+
+      <input
+        type="text"
+        id="uName"
+        name="uName"
+        placeholder="Enter Name"
+        required
+      /><br />
+      <br />
+      <label id="email" for="Email"><strong>Email</strong></label
+      ><br />
+
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        placeholder="Enter Email"
+      /><br />
+      <br />
+      <label id="job" for="Email"><strong>Job Title</strong></label
+      ><br />
+
+      <input
+        type="text"
+        id="Jobtitle"
+        name="Email"
+        placeholder="JoB Title"
+      /><br />
+      <br />
+      <label id="cp" for="CurrentPosition"
+        ><strong>Current Position</strong></label
+      ><br />
+
+      <input
+        type="text"
+        id="CurrentPosition"
+        name="position"
+        placeholder="Current Position"
+      /><br />
+      <br />
+
+      <label id="Experience" for="Experience"><strong>Experience</strong></label
+      ><br />
+
+      <input type="text" id="exp" name="exp" placeholder="Experience" /><br />
+      <br />
+      <label id="POrganization" for="POrganization"
+        ><strong>Prv.Organzation</strong></label
+      ><br />
+
+      <input
+        type="text"
+        id="porg"
+        name="porg"
+        placeholder="Previous Organization"
+      /><br />
+      <br />
+      <label id="Skills" for="Skills"><strong>Skills</strong></label
+      ><br />
+
+      <input type="text" id="skills" name="skills" placeholder="Skills" /><br />
+      <br />
+      <label id="images" for="photos"><strong>photos</strong></label
+      ><br />
+      <input type="file" id="photos" name="photos" placeholder="Image" /><br />
+      <br />
+      <label id="resume" for="resumes"><strong>Resume</strong></label
+      ><br />
+      <input type="file" id="resumes" name="resume" placeholder="resume" /><br />
+      <br />
+
+      <button><a routerLink="/home">Submit</a></button>
+      (ngSubmit)="onSubmit()"
+    </form> -->
+    <form class="col-lg-12"    (ngSubmit)="onSubmit()">
+      <div class="container-fuild">
+        <div class="row">
+          <div class="form-group col-lg-4">
+            <label for="exampleInputEmail1">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              [(ngModel)]="user.userFirstName"
+              name="first"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPassword1"
+              name="first"
+              [(ngModel)]="user.userLastName"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Job Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPassword2"
+              name="first"
+              [(ngModel)]="user.userJobTitle"
+              
+            />
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Current Position</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPassword3"
+              name="first"
+              [(ngModel)]="user.userCurrentPosition"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Previous Organization</label>
+            <!-- <input type="text" class="form-control" id="exampleInputPassword1"> -->
+            <select class="form-control" [(ngModel)]="user.userPreviousOrganization" name="first">
+              <option>Mphasis</option>
+              <option>TCS</option>
+              <option>Amazon</option>
+              <option>Fedex</option>
+              <option>Cognizant</option>
+              <option>Bank of America</option>
+            </select>
+          </div>
+          <!-- <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div> -->
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Experience</label><br />
+            <select class="form-control"  [(ngModel)]="user.yearsOfExperience" name="first">
+              <option>0-1 years</option>
+              <option>1-3 years</option>
+              <option>3-5 years</option>
+              <option>5-7 years</option>
+              <option>7-10 years</option>
+              <option>years>10</option>
+            </select>
+            <!-- <input type="text" class="form-control" id="exampleInputPassword1"> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Skills</label>
+            <ng-select 
+              [items]="items"
+              bindLabel="name"
+              placeholder="skills"
+              multiple="true"
+              name="first"
+              [(ngModel)]="user.userSkills"
+            >
+            </ng-select> 
+            <!-- <mat-form-field appearance="fill">
+              <mat-label>Toppings</mat-label>
+              <mat-select [formControl]="toppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field> -->
+          </div>
+
+
+          <!-- <div class="form-group col-lg-4">
+            <label for="exampleInputPassword1">Experience</label><br />
+            <select class="form-control">
+              <option>0-1 years</option>
+              <option>1-3 years</option>
+              <option>3-5 years</option>
+              <option>5-7 years</option>
+              <option>7-10 years</option>
+              <option>years>10</option>
+            </select>
+             <input type="text" class="form-control" id="exampleInputPassword1">
+          </div> -->
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <label for="exampleInputPassword1">Photos</label><br />
+            <input type="file" id="exampleInputPassword1"    [(ngModel)]="user.Photos" name="first"/>
+          </div>
+          <div class="col-lg-6">
+            <label for="exampleInputPassword1">Resume</label><br />
+            <input type="file" id="exampleInputPassword1"  [(ngModel)]="user.Resume" name="last" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

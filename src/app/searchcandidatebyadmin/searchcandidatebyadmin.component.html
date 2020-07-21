@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+   
+  <div class="row">
+      <div class="main">
+        <h1 style="text-align: center; color: #ffffff; margin-left: 70px;">
+            Search  candidate information by Admin/Editors
+        </h1>
+    
+    
+    <input type="search" id="search" name="search" placeholder="please Enter UserName">
+    
+    <button type="button" (click)="gotoDisplayadmin()">Search</button>
+      </div>
+    </div>
+
+      <div class="row" *ngIf="a">
+        <app-viewcandidate-admin></app-viewcandidate-admin>
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+table{
+  position: fixed;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+
+}
+
+table thead{
+  background-color: #fff;
+  color: #219bd7;
+}
+table tbody tr{
+  background-color: lightgray;
+
+}

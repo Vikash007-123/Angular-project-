@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InformationDetails</title>
+    
+  </head>
+  <body >
+    <!-- <div class="topnav">
+      <a class="active" routerLink="/candidate">Create</a>
+      <a routerLink="/search" >View Profile</a>
+      <a routerLink="/interviewscheduled">Interview Schedule</a>
+      <a routerLink="/candidateRes">Search & Results</a>
+      <a routerLink="/admin">Admin</a>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
+      <a class="navbar-brand" routerLink="/" style="color: #219bd7;;">
+        <img src="./assets/logo2.png"><strong>MHire</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/candidate" style="font-weight: 600;">Create Profile<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/interviewscheduled" style="font-weight: 600;">Interview Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/candidateRes" style="font-weight: 600;">Result</a>
+          </li>
+          <li class="nav-item dropdown" (click)="toggleDisplay()">
+            <a class="nav-link"  tabindex="-1" aria-disabled="true" style="font-size: 20px;">
+              <i class="fa fa-user"  aria-hidden="true">
+               
+              </i>
+            </a>
+          
+            
+            
+
+            
+          </li>
+        
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <h1 style="color: aliceblue; position: absolute; top: 30%; left: 7%; font-size: 48px; font-weight: 600;">Beautiful, Effective,<br><br>
+      Easy-To-Use HR <br>,<br>
+      Software for Growing <br><br>
+      Businesses</h1>
+      <input type="submit" value="MHire" routerLink="/login" style="background: transparent;padding: .5rem 1rem; font-size: 16px; color: #ffffff; width: 180px; border: 1px solid #fff; border-radius: 4px; position: absolute; top: 65%;
+      left: 7%; " /> -->
+    
+ 
+    <div *ngIf="isDisplay" class="row" >
+      <app-sidebar></app-sidebar>
+    </div>
+    
+  </body>
+  
+</html>
+

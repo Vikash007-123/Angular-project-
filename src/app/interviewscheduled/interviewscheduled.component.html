@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InterviewSchedule</title>
+  </head>
+  <body>
+    <app-homepage></app-homepage>
+  
+    
+   
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Interview Type</th>
+          <th scope="col">Clicent Name</th>
+          <!-- <th scope="col">Event Type</th> -->
+          <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Date & Time</th>
+          <th scope="col">Job Description</th>
+        </tr>
+        
+      </thead>
+      <tbody>
+        <!-- *ngIf="users!==undefined && users!==''" -->
+        <tr *ngFor="let user1 of users">
+          <th scope="row">{{user1.interviewAutoId}}</th>
+          <td>{{user1.jobOpenings.client.companyName}}</td>
+          <td>{{user1.dateTime}} </td>
+          <td> {{user1.jobOpenings.jobDescription}}</td>
+        </tr>
+        <!-- <tr>
+          <th scope="row">{{user.interviewAutoId}}</th>
+          <td>{{user.jobOpenings.client.companyName}}</td>
+          <td>{{user.dateTime}} </td>
+          <td> {{user.jobOpenings.jobDescription}}</td>
+        </tr> -->
+        
+      </tbody>
+    </table>
+  </body>
+</html>

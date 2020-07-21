@@ -1,0 +1,16 @@
+ form{
+     position: fixed;
+     left:10%;
+     top:30%;
+     color: #fff;
+     
+    
+}  
+
+button{
+     position: absolute;
+     right: 33%;
+     background-color: #fff;
+     color: #219bd7;
+}
+

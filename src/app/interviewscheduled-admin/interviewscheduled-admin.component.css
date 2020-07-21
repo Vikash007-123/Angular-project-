@@ -1,0 +1,26 @@
+body{
+    background-color: #3b5998;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color:floralwhite;
+}
+form{
+    margin-left: 60%;
+}
+#Cname,#uName,#Email,#date,#IType,#EType,#jd{
+    width: 250px;
+    height: 30px;
+    border-bottom:solid;
+
+}
+
+button{
+    height: 30px;
+    width: 70px;
+    margin-left: 40%;
+    margin-top: 4%;
+    border: solid;
+}

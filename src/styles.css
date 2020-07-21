@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    width: 100%;
+    background-image: url("https://gethired.com/pie/images/homepage.jpg"); 
+    /* background-image: url("./assets/homebg.png");  */
+   
+    /* background-position: top; */
+    /* background-color: #ededed; */
+  }
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
