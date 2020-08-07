@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-home-page.component.css']
 })
 export class MainHomePageComponent implements OnInit {
-
+  isDisplay=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  toggleDisplaymain(){
+    this.isDisplay=!this.isDisplay;
   }
 
 }

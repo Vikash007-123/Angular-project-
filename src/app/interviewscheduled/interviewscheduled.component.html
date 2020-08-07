@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InterviewSchedule</title>
-  </head>
-  <body>
+
     <app-homepage></app-homepage>
   
     
    
-    <table class="table table-striped">
+     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Interview Type</th>
-          <th scope="col">Clicent Name</th>
-          <!-- <th scope="col">Event Type</th> -->
+          <th scope="col">Interview ID</th>
+          <th scope="col">Position ID</th>
+          <th scope="col">Candidate Name</th>
+          <th scope="col">Candidate Email</th>
+          <th scope="col">Candidate Phone</th>
+          <th scope="col"> candidate Profile</th>
           <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Date & Time</th>
-          <th scope="col">Job Description</th>
+          <th scope="col">status</th>
         </tr>
         
       </thead>
-      <tbody>
+      <tbody> 
         <!-- *ngIf="users!==undefined && users!==''" -->
-        <tr *ngFor="let user1 of users">
+          <tr *ngFor="let user1 of users">
           <th scope="row">{{user1.interviewAutoId}}</th>
-          <td>{{user1.jobOpenings.client.companyName}}</td>
-          <td>{{user1.dateTime}} </td>
-          <td> {{user1.jobOpenings.jobDescription}}</td>
-        </tr>
+          
+          <td>{{user1.jobOpenings.jobId}}</td>
+          <td>{{user1.user.userFirstName}}{{user1.user.userLastName}}</td>
+          <td>{{user1.user.userEmail}}</td>
+          <td>{{user1.user.contactPhone}}</td>
+          <td>{{user1.user.resume}}</td>
+          <td>{{user1.dateTime|date:'medium'}} </td>
+          <td> {{user1.interviewStatus}}</td>
+        </tr>  
         <!-- <tr>
           <th scope="row">{{user.interviewAutoId}}</th>
           <td>{{user.jobOpenings.client.companyName}}</td>
@@ -37,6 +38,34 @@
         </tr> -->
         
       </tbody>
-    </table>
-  </body>
-</html>
+    </table> 
+    
+        <!-- <table class="table table-striped">
+          <thead>
+            <tr class="table-info">
+              <th scope="col">Interview Id</th>
+              <th scope="col">Job Id</th>
+              <th scope="col">Candidate Name</th>
+              <th scope="col">Candidate Email</th>
+    
+              <th scope="col">Candidate Phone</th>
+              <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Date & Time</th>
+              <th scope="col">status</th>
+            </tr>
+          </thead>
+          <tbody>
+         <tr *ngFor="let user1 of users" >
+          <th scope="row" style="color: #fff;">{{user1.interviewAutoId}}</th>
+          
+          <td style="color: #fff;">{{user1.jobOpenings.jobId}}</td>
+          <td style="color: #fff;">{{user1.user.userFirstName}}{{user1.user.userLastName}}</td>
+          <td style="color: #fff;">{{user1.user.userEmail}}</td>
+          <td style="color: #fff;">{{user1.user.contactPhone}}</td>
+          <td style="color: #fff;">{{user1.dateTime|date:'medium'}} </td>
+          <td style="color: #fff;"> {{user1.interviewStatus}}</td>
+        </tr>
+          </tbody>
+        </table>
+    
+ 
+ -->

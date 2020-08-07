@@ -37,7 +37,7 @@ export interface PeriodicElement {
 
 export class CandidateresultdataComponent implements OnInit {
   ELEMENT_DATA:PeriodicElement[];
-  displayedColumns: string[] = ['interviewAutoId', 'companyName', 'dateTime', 'interviewStatus'];
+  displayedColumns: string[] = ['interview ID','Position ID', 'Candidate Name','Candidate Email','Candidate Phone', 'Date Time', 'Status','Feedback'];
   dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
   users:any;
 

@@ -1,6 +1,6 @@
 <app-main-home-page></app-main-home-page>
 
-<form class="col-lg-12">
+<form class="col-lg-12" (ngSubmit)="onSubmit()">
   <!-- <div class="row"> -->
   <!-- <div class="form-group col-lg-4">
     <label for="exampleInputPassword1">User Name</label>
@@ -9,23 +9,40 @@
 
   <div class="form-group col-lg-4">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="emailAdd" [ngModelOptions]="{standalone: true}" placeholder="Enter email" required>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+     [(ngModel)]="user.userEmail" [ngModelOptions]="{standalone: true}" placeholder="Enter email"
+     required>
+     <!-- <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.email.errors.required">Please Enter Email </div>
+      <div *ngIf="registerForm.controls.email.errors.email">Email must be a valid email address</div>
+  </div> -->
     
   </div>
-<!-- </div>  -->
-  <!-- <div class="row"> -->
+
 
   <div class="form-group col-lg-4">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" placeholder="Password" required >
+    <input type="password" class="form-control" id="exampleInputPassword1" 
+    [(ngModel)]="user.userPassword" [ngModelOptions]="{standalone: true}" placeholder="Password"
+    required >
+    <!-- <div *ngIf="submitted &amp;&amp; registerForm.controls.password.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.password.errors.required">Please Enter password </div>
+      <div *ngIf="registerForm.controls.password.errors.password">password must be valid</div>
+  </div> -->
   </div>
 
-  <div class="form-group col-lg-4">
+    <div class="form-group col-lg-4">
     <label for="exampleInputPassword1">Confirm Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="confPass" [ngModelOptions]="{standalone: true}"  placeholder="Password" required>
-  </div>
+    <input type="password" class="form-control" id="exampleInputPassword1"
+     [(ngModel)]="user.userPassword" [ngModelOptions]="{standalone: true}"  placeholder="Password"
+     
+     required>
+  <!--     <div *ngIf="submitted &amp;&amp; registerForm.controls.confpassword.errors" class="text-danger">
+      <div *ngIf="registerForm.controls.confpassword.errors.required">please Enter a confPassword</div>
+      <div *ngIf="registerForm.controls.confpassword.errors.confpassword">password and confpasswor</div>
+  </div> -->
+  </div>  
 
-<!-- </div> -->
   
-  <button type="submit" class="btn btn-danger" (click)="gotologin()">Register</button>
+  <button type="submit" class="btn btn-danger" >Register</button>
 </form>

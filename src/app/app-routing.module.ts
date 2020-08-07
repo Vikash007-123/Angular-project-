@@ -1,3 +1,8 @@
+import { JobViewComponent } from './job-view/job-view.component';
+import { JobViewDetailsComponent } from './job-view-details/job-view-details.component';
+import { JobListComponent } from './job-list/job-list.component';
+import { CreatejobComponent } from './createjob/createjob.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 import { DataUrlComponent } from './data-url/data-url.component';
 import { ExpComponent } from './exp/exp.component';
 import { TechnicalComponent } from './technical/technical.component';
@@ -51,6 +56,11 @@ export const routes: Routes = [
   {path:'technical',component:TechnicalComponent},
   {path:'expierence',component:ExpComponent},
   {path:'dataurl',component:DataUrlComponent},
+  {path:'jobd', component:JobDetailsComponent},
+  {path:'createjob',component:CreatejobComponent},
+  {path:'job-list',component:JobListComponent},
+  { path: 'detailsjob/:jobId', component: JobViewDetailsComponent },
+  {path:'updatejob/:jobId',component:JobViewComponent}
 
   
  

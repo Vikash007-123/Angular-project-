@@ -13,15 +13,39 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
+
+        <li class="dropdown">
+          <button class="btn btn-primary"><i class="fa fa-user-o"></i>Users
+ 
+          </button>
+          <div class="dropdown-content">
+            <a routerLink="/login">Client</a>
+            <a routerLink="/login">MphasisUser</a>
+            
+          </div>
+        </li> 
         <li class="nav-item active">
           <a class="nav-link active" routerLink="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">LogIn</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-primary" style="color: #fff; font-weight: 100;" routerLink="/signup"><i class="fa fa-user-o" aria-hidden="true"></i> SignUp</a>
-        </li>
+        
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Client</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown" (click)="toggleDisplaymain()">
+          <a class="nav-link btn btn-primary" style="color: #fff; font-weight: 100;" routerLink="/login"><i class="fa fa-user-o" aria-hidden="true"></i>Users</a>
+        </li> -->
+        <!-- <div class="dropdown">
+          <button class=" btn btn-primary"><i class="fa fa-user-o"></i>Users
+            
+          </button>
+          <div class="dropdown-content">
+            <a routerLink="/login">Client</a>
+            <a routerLink="/login">MphasisUser</a>
+            
+          </div>
+        </div>  -->
+        
        
       </ul>
     </div>

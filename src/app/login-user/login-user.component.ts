@@ -7,7 +7,6 @@ import { DialogComponent } from '../dialog/dialog.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{UserService} from '../service/user.service';
 import { User } from '../user';
-import { error } from 'console';
 
 
 

@@ -44,6 +44,12 @@ import { ProfileDisplayComponent } from './profile-display/profile-display.compo
 import { TechnicalComponent } from './technical/technical.component';
 import { ExpComponent } from './exp/exp.component';
 import { DataUrlComponent } from './data-url/data-url.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { CreatejobComponent } from './createjob/createjob.component';
+import { JobViewComponent } from './job-view/job-view.component';
+import { JobListComponent } from './job-list/job-list.component';
+import { UpdateJobComponent } from './update-job/update-job.component';
+import { JobViewDetailsComponent } from './job-view-details/job-view-details.component';
 
 
 
@@ -74,6 +80,12 @@ import { DataUrlComponent } from './data-url/data-url.component';
     TechnicalComponent,
     ExpComponent,
     DataUrlComponent,
+    JobDetailsComponent,
+    CreatejobComponent,
+    JobViewComponent,
+    JobListComponent,
+    UpdateJobComponent,
+    JobViewDetailsComponent,
     
   ],
   imports: [

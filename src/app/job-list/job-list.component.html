@@ -1,0 +1,38 @@
+<!-- <app-job-details></app-job-details> -->
+<app-homepage></app-homepage>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="color: #fff;">JOB List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-info">
+            <th>Job Title</th>
+            <th>Skills</th>
+            <th>Experience Required</th>
+            <th>Job Location</th>
+            <th>Job Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr style="color: #fff;"  *ngFor="let job1 of joblist">
+            <td>{{job1.jobTitle}}</td>
+            <td>{{job1.desiredSkills}}</td>
+            <td>{{job1.experienceRequired}}</td>
+            <td>{{job1.jobLocation}}</td>
+            <td>{{job1.jobDescription}}</td>
+             <td>  
+              <button  class="btn btn-info" style="margin-left: 10px" (click)="updateJobOpenings(job1.jobId)" class="btn btn-primary" >Update</button>
+                <button  class="btn btn-info"  style="margin-left: 10px" (click)="getjobviewDetails(job1.jobId)" class="btn btn-primary" >View</button>
+                <button class="btn btn-info"  (click)="deleteJobOpenings(job1.jobId)"style="margin-left: 10px" class="btn btn-danger">Delete</button>
+            </td>
+          </tr> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  

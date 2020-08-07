@@ -1,0 +1,27 @@
+<h2 style="color: #fff;">JoB Details</h2> 
+
+<hr/>
+<div *ngIf="job" style="color: #fff;">
+  <div>
+    <label><b>jobTitle: </b></label> {{job.jobTitle}}
+  </div>
+  <div>
+    <label><b>Skills: </b></label> {{job.desiredSkills}}
+  </div>
+  <div>
+    <label><b>Experience Required: </b></label> {{job.experienceRequired}}
+  </div>  
+  <div>
+    <label><b>Job Location: </b></label> {{job.jobLocation}}
+  </div>  
+  <div>
+    <label><b>Job Description: </b></label> {{job.jobDescription}}
+  </div>  
+    
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">job list</button><br>
+
+

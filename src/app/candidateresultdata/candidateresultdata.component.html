@@ -1,6 +1,6 @@
 <app-homepage></app-homepage>
 
-<h1 style="color: white; text-align: center;">Interview Taken</h1>
+<h1 style="color: white; text-align: center;"></h1>
 
 <!-- <mat-card class="example-card">
   <mat-card-header>
@@ -39,27 +39,43 @@
 <table mat-table [dataSource]="dataSource" matSort >
 
   <!-- Position Column -->
-  <ng-container matColumnDef="interviewAutoId">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.interviewAutoId}} </td>
+  <ng-container matColumnDef="interview ID">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> interview ID </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewAutoId}} </td> -->
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="companyName">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Client Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.jobOpenings.client.companyName}} </td>
+  <ng-container matColumnDef="Position ID">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> PositionID </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.jobOpenings.client.companyName}} </td> -->
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="dateTime">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Date </th>
-    <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
+  <ng-container matColumnDef="Candidate Name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Candidate Name </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.dateTime|date:'medium'}} </td> -->
   </ng-container>
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="interviewStatus">
+  <ng-container matColumnDef="Candidate Email">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Candidate Email </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td> -->
+  </ng-container>
+  <ng-container matColumnDef="Candidate Phone">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Candidate Phone </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td> -->
+  </ng-container>
+  <ng-container matColumnDef="Date Time">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Date Time </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td> -->
+  </ng-container>
+  <ng-container matColumnDef="Status">
     <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Status </th>
-    <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td> -->
+  </ng-container>
+  <ng-container matColumnDef="Feedback">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header style="background-color:#219bd7; color: #fff;"> Feedback </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.interviewStatus}} </td> -->
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

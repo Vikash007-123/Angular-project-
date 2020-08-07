@@ -136,84 +136,71 @@
         </div>
         <div class="row">
           <div class="form-group col-lg-4">
-            <label for="exampleInputPassword1">Previous Organization</label>
-            <!-- <input type="text" class="form-control" id="exampleInputPassword1"> -->
-            <select class="form-control" [(ngModel)]="user.userPreviousOrganization" name="first">
+            <label for="Experience Required"  class="">previousOrganization</label><br>
+             
+            <select class="form-control" [(ngModel)]="user.userPreviousOrganisation" [ngModelOptions]="{standalone: true}">
               <option>Mphasis</option>
               <option>TCS</option>
               <option>Amazon</option>
               <option>Fedex</option>
               <option>Cognizant</option>
               <option>Bank of America</option>
-            </select>
-          </div>
-          <!-- <div class="form-group col-lg-4">
-            <label for="exampleInputPassword1">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div> -->
+          </select>
+          
+       
+
+          </div> 
+         
+          
+         <div class="form-group col-lg-4">
+          <label for="Experience Required"  class="">Experience</label><br>
+         
+          <select class="form-control" [(ngModel)]="user.yearsOfExperience" [ngModelOptions]="{standalone: true}">
+            <option>0-1 Years</option>
+            <option>1-3 Years</option>
+            <option>3-5 Years</option>
+            <option>5-7 Years</option>
+            <option>7-10 Years</option>
+            <option>Above 10 Years</option>
+        </select>
+        </div>
+        </div> 
+
+        
+     
+          <div class="row">
           <div class="form-group col-lg-4">
-            <label for="exampleInputPassword1">Experience</label><br />
-            <select class="form-control"  [(ngModel)]="user.yearsOfExperience" name="first">
-              <option>0-1 years</option>
-              <option>1-3 years</option>
-              <option>3-5 years</option>
-              <option>5-7 years</option>
-              <option>7-10 years</option>
-              <option>years>10</option>
-            </select>
-            <!-- <input type="text" class="form-control" id="exampleInputPassword1"> -->
+            <label for="desiredSkills" class="">Skills </label><br>
+            <ng-select #MyNgSelect bindLabel="name" placeholder="Select Skills"  multiple="true"
+              [searchable]="true" [clearable]="true" [closeOnSelect]="false" [(ngModel)]="desiredskillArray"
+              name="desiredSkills" (change)="getdesiredSkillValues()">
+              <ng-option [value]="item.name" [disabled]="item.disabled" *ngFor="let item of desiredSkillItems">
+                
+                {{item.name}}
+              </ng-option>
+            </ng-select>
           </div>
         </div>
-        <div class="row">
-          <div class="form-group col-lg-4">
-            <label for="exampleInputPassword1">Skills</label>
-            <ng-select 
-              [items]="items"
-              bindLabel="name"
-              placeholder="skills"
-              multiple="true"
-              name="first"
-              [(ngModel)]="user.userSkills"
-            >
-            </ng-select> 
-            <!-- <mat-form-field appearance="fill">
-              <mat-label>Toppings</mat-label>
-              <mat-select [formControl]="toppings" multiple>
-                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-              </mat-select>
-            </mat-form-field> -->
-          </div>
-
-
-          <!-- <div class="form-group col-lg-4">
-            <label for="exampleInputPassword1">Experience</label><br />
-            <select class="form-control">
-              <option>0-1 years</option>
-              <option>1-3 years</option>
-              <option>3-5 years</option>
-              <option>5-7 years</option>
-              <option>7-10 years</option>
-              <option>years>10</option>
-            </select>
-             <input type="text" class="form-control" id="exampleInputPassword1">
-          </div> -->
-        </div>
-        <div class="row">
+           
+          
+          <div class="row">
           <div class="col-lg-4">
             <label for="exampleInputPassword1">Photos</label><br />
-            <input type="file" id="exampleInputPassword1"    [(ngModel)]="user.Photos" name="first"/>
+            <input type="file" id="exampleInputPassword1" (change)="onFileChanged($event)">
           </div>
-          <div class="col-lg-6">
+          <div *ngIf=message>{{message}}</div>
+    
+           <div class="col-lg-6">
             <label for="exampleInputPassword1">Resume</label><br />
             <input type="file" id="exampleInputPassword1"  [(ngModel)]="user.Resume" name="last" />
-          </div>
-        </div>
+          </div> 
+        </div>  
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-    </form>
+    </form> 
+
+
+
+    
   </body>
 </html>
